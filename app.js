@@ -2,6 +2,7 @@ const express = require('express');
 const fs = require('fs');
 const path = ('require');
 const app = express();
+const PORT = process.env.PORT || 5000;
 
 //module for handling form data
 var bp = require('body-parser')
@@ -72,5 +73,5 @@ app.get('*',function (req, res) {
        res.redirect('/frontpage');
 });
 
-app.listen(8081);
+app.listen(PORT);
 console.log("server open in http://localhost:8081/");
